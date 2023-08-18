@@ -37,3 +37,15 @@ function operate(operator, a, b) {
     }
 }
 
+let displayValue;
+// Create function that populate the display when buttons are clicked
+function display(num) {
+    if (displayValue === undefined) {
+        displayValue = num;
+    } else {
+        displayValue += num;
+    }
+    document.getElementById("display").textContent = displayValue;
+}
+
+
