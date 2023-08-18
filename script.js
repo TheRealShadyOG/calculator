@@ -19,3 +19,8 @@ function divide(a, b) {
     return a / b;
 }
 
+// Make variables for operations
+let firstNum;
+let operator;
+let secondNum;
+
