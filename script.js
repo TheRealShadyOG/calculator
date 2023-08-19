@@ -37,10 +37,11 @@ function operate(operator, a, b) {
     }
 }
 
-let displayValue;
+let displayValue = 0;
+document.getElementById("display").textContent = displayValue;
 // Create function that populate the display when buttons are clicked
 function display(num) {
-    if (displayValue === undefined) {
+    if (displayValue === 0) {
         displayValue = num;
     } else {
         displayValue += num;
@@ -48,4 +49,13 @@ function display(num) {
     document.getElementById("display").textContent = displayValue;
 }
 
-
+// Store the first and second inputs
+    function storeNum() {
+        if (firstNum === undefined) {
+            firstNum = displayValue;
+            displayValue = 0;
+        } else if (secondNum === undefined) {
+            secondNum = displayValue;
+            displayValue = 0;
+        } 
+    }
