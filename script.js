@@ -64,6 +64,9 @@ function storeNum() {
 function updateOperator(selecetedOp) {
     operator = selecetedOp
     storeNum()
+    if (firstNum !== undefined && secondNum !== undefined) {
+        operate(operator, firstNum, secondNum);
+    }
 }
 
 // Run operation
