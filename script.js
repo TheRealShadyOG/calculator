@@ -52,10 +52,10 @@ function display(num) {
 // Store the first and second inputs
 function storeNum() {
     if (firstNum === undefined) {
-        firstNum = displayValue;
+        firstNum = Number(displayValue);
         displayValue = 0;
     } else if (secondNum === undefined) {
-        secondNum = displayValue;
+        secondNum = Number(displayValue);
         displayValue = 0;
     } 
 }
