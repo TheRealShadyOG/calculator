@@ -76,12 +76,14 @@ function updateOperator(selecetedOp) {
 
 // Run operation
 function calculate() {
-    storeNum();
-    operate(operator, firstNum, secondNum);
-    firstNum = displayValue;
-    displayValue = 0;
-    secondNum = undefined;
-    operator = undefined;
+    if (displayValue !== 0 && operator !== undefined) {
+        storeNum();
+        operate(operator, firstNum, secondNum);
+        firstNum = displayValue;
+        displayValue = 0;
+        secondNum = undefined;
+        operator = undefined;
+    }
 }
 
 // Clear button 
