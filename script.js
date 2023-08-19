@@ -32,7 +32,11 @@ function operate(operator, a, b) {
     } else if (operator === "*") {
         displayValue = multiply(a, b);
     } else if (operator === "/") {
-        displayValue = divide(a, b);
+        if (b === 0) {
+            document.getElementById("display").textContent = "Error";
+            return
+        }
+        displayValue = divide(a, b);   
     }
     displayValue = +displayValue.toFixed(3);
     document.getElementById("display").textContent = displayValue;
