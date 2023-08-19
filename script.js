@@ -62,10 +62,11 @@ function storeNum() {
 
 // Utilize selected operator
 function updateOperator(selecetedOp) {
-    operator = selecetedOp
-    storeNum()
-    if (firstNum !== undefined && secondNum !== undefined) {
-        operate(operator, firstNum, secondNum);
+    if (operator === undefined) {
+        operator = selecetedOp;
+        storeNum();
+    } else {
+        calculate();
     }
 }
 
