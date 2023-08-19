@@ -65,3 +65,9 @@ function updateOperator(selecetedOp) {
     operator = selecetedOp
     storeNum()
 }
+
+// Run operation
+function calculate() {
+    storeNum();
+    operate(operator, firstNum, secondNum);
+}
