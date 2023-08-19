@@ -34,6 +34,7 @@ function operate(operator, a, b) {
     } else if (operator === "/") {
         displayValue = divide(a, b);
     }
+    displayValue = +displayValue.toFixed(3);
     document.getElementById("display").textContent = displayValue;
 }
 
