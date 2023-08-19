@@ -98,3 +98,10 @@ function reset() {
     secondNum = undefined;
     operator = undefined;
 }
+
+// Decimal button
+function decimal() {
+    if (displayValue.includes('.') === false) {
+        display(".")
+    }
+}
