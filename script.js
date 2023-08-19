@@ -102,6 +102,12 @@ function reset() {
 // Decimal button
 function decimal() {
     if (displayValue.includes('.') === false) {
-        display(".")
+        display(".");
     }
+}
+
+// Back button
+function undo() {
+    displayValue = displayValue.slice(0, -1);
+    document.getElementById("display").textContent = displayValue;
 }
