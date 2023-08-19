@@ -50,12 +50,18 @@ function display(num) {
 }
 
 // Store the first and second inputs
-    function storeNum() {
-        if (firstNum === undefined) {
-            firstNum = displayValue;
-            displayValue = 0;
-        } else if (secondNum === undefined) {
-            secondNum = displayValue;
-            displayValue = 0;
-        } 
-    }
+function storeNum() {
+    if (firstNum === undefined) {
+        firstNum = displayValue;
+        displayValue = 0;
+    } else if (secondNum === undefined) {
+        secondNum = displayValue;
+        displayValue = 0;
+    } 
+}
+
+// Utilize selected operator
+function updateOperator(selecetedOp) {
+    operator = selecetedOp
+    storeNum()
+}
