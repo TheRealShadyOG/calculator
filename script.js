@@ -71,3 +71,12 @@ function calculate() {
     storeNum();
     operate(operator, firstNum, secondNum);
 }
+
+// Clear button 
+function reset() {
+    displayValue = 0;
+    document.getElementById("display").textContent = displayValue;
+    firstNum = undefined;
+    secondNum = undefined;
+    operator = undefined;
+}
