@@ -64,9 +64,12 @@ function storeNum() {
 function updateOperator(selecetedOp) {
     if (operator === undefined) {
         operator = selecetedOp;
-        storeNum();
+        if (firstNum === undefined) {
+            storeNum();
+        }
     } else {
         calculate();
+        operator = selecetedOp;
     }
 }
 
@@ -74,6 +77,10 @@ function updateOperator(selecetedOp) {
 function calculate() {
     storeNum();
     operate(operator, firstNum, secondNum);
+    firstNum = displayValue;
+    displayValue = 0;
+    secondNum = undefined;
+    operator = undefined;
 }
 
 // Clear button 
