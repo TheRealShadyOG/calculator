@@ -1,5 +1,4 @@
 // Add function
-
 function add(a, b) {
     return a + b;
 }
@@ -27,14 +26,15 @@ let secondNum;
 // Create operate function
 function operate(operator, a, b) {
     if (operator === "+") {
-        return add(a, b);
+        displayValue = add(a, b);
     } else if (operator === "-") {
-        return subtract(a, b);
+        displayValue = subtract(a, b);
     } else if (operator === "*") {
-        return multiply(a, b);
+        displayValue = multiply(a, b);
     } else if (operator === "/") {
-        return divide(a, b);
+        displayValue = divide(a, b);
     }
+    document.getElementById("display").textContent = displayValue;
 }
 
 let displayValue = 0;
