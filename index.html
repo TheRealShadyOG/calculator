@@ -8,34 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="display"></div>
-    <div>    
-        <button onclick="undo()">&#8592;</button>
-        <button onclick="reset()">C</button>
-    </div>
-    <div>
-        <button onclick="display('7')">7</button>
-        <button onclick="display('8')">8</button>
-        <button onclick="display('9')">9</button>
-        <button onclick="updateOperator('/')">/</button>
-    </div>
-    <div>
-        <button onclick="display('4')">4</button>
-        <button onclick="display('5')">5</button>
-        <button onclick="display('6')">6</button>
-        <button onclick="updateOperator('*')">*</button>
-    </div>
-    <div>
-        <button onclick="display('1')">1</button>
-        <button onclick="display('2')">2</button>
-        <button onclick="display('3')">3</button>
-        <button onclick="updateOperator('-')">-</button>
-    </div>
-    <div>
-        <button onclick="display('0')">0</button>
-        <button onclick="decimal()">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="updateOperator('+')">+</button>
+    <div id="calcBody">
+        <div id="display"></div>
+        <div>    
+            <button id="backspace" onclick="undo()">&#8592;</button>
+            <button id="clear" onclick="reset()">C</button>
+        </div>
+        <div>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="updateOperator('/')">/</button>
+        </div>
+        <div>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="updateOperator('*')">*</button>
+        </div>
+        <div>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="updateOperator('-')">-</button>
+        </div>
+        <div>
+            <button onclick="display('0')">0</button>
+            <button onclick="decimal()">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="updateOperator('+')">+</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
