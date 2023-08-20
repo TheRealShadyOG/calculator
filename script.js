@@ -111,3 +111,60 @@ function undo() {
     displayValue = displayValue.slice(0, -1);
     document.getElementById("display").textContent = displayValue;
 }
+
+// Add keyboard support
+document.addEventListener('keypress', keyInput)
+
+// Add function keyInput
+function keyInput(event) {
+    // Numbers
+    if (event.key === '0') {
+        display('0');
+    } else if (event.key === '1') {
+        display('1');
+    } else if (event.key === '2') {
+        display('2');
+    } else if (event.key === '3') {
+        display('3');
+    } else if (event.key === '4') {
+        display('4');
+    } else if (event.key === '5') {
+        display('5');
+    } else if (event.key === '6') {
+        display('6');
+    } else if (event.key === '7') {
+        display('7');
+    } else if (event.key === '8') {
+        display('8');
+    } else if (event.key === '9') {
+        display('9');
+    // Decimal 
+    } else if (event.key === '.') {
+        decimal();
+    // Operators
+    } else if (event.key === '+') {
+        updateOperator('+');
+    } else if (event.key === '-') {
+        updateOperator('-');
+    } else if (event.key === '*') {
+        updateOperator('*');
+    } else if (event.key === '/') {
+        updateOperator('/');
+    // Run equation
+    } else if (event.key === '=' || event.key === 'Enter') {
+        calculate();
+    // Clear 
+    } else if (event.key === 'c' || event.key === 'C') {
+        reset();
+    // Undo 
+    } else if (event.key === 'Delete') {
+        undo();
+    }
+}
+
+// Keydown for backspace 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Backspace') {
+        undo();
+    }
+})
